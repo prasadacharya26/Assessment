@@ -199,31 +199,7 @@ public class TicketServiceImpl implements TicketService {
 		return null;
 	}
 
-	@Override
-	public List<TicketDTO> findMyTickets(int customerId) {
-		List<TicketDTO> ticketDTOs = new ArrayList<TicketDTO>();
-		try {
-			if (customerId != 0) {
-//				List<TicketEntity> ticketEntities = ticketRepository.findByCustomerId(customerId);
-//				if(ticketEntities!=null) {
-//						TicketDTO ticketDTO=new TicketDTO();
-//						for (TicketEntity ticketEntity : ticketEntities) {
-//							BeanUtils.copyProperties(ticketEntity, ticketDTO);
-//							ticketDTO.setDate(date.format(ticketEntity.getDate()));
-//							ticketDTOs.add(ticketDTO);
-//						}
-//				}else {
-//					logger.info("Customer id not found");
-//				}
-			} else {
-				logger.info("Invalid customer id");
-			}
-		} catch (Exception e) {
-			logger.error(e.getMessage(), e.getClass().getName());
-		}
-		return ticketDTOs;
-	}
-
+	
 	@Override
 	public String saveAll(List<TicketDTO> ticketDTOs) {
 		List<TicketEntity> ticketEntities1 = new ArrayList<>();

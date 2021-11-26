@@ -13,8 +13,6 @@ public interface TicketService {
 	String updateTicketById(TicketDTO ticketDTO);
 
 	String updateStatusById(int ticketId, String status);
-
-	List<TicketDTO> findMyTickets(int customerId);
 	
 	String saveAll(List<TicketDTO> ticketDTOs);
 

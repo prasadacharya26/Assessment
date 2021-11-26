@@ -71,17 +71,6 @@ public class TicketController {
 		return message;
 	}
 	
-	@GetMapping("myTickets")
-	List<TicketDTO> myTickets(@RequestParam int customerId){
-		List<TicketDTO> ticketDTOs=null;
-		try {
-			ticketDTOs = ticketService.findMyTickets(customerId);
-		} catch (Exception e) {
-			logger.error(e.getMessage(),e.getClass().getSimpleName());
-		}
-		return ticketDTOs;
-	}
-	
 	@GetMapping("checkProgress")
 	TicketDTO checkProgress(@RequestParam int tickedId) {
 		TicketDTO ticketDTO = null;
